@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFR - Home</title>
+    <link rel="shortcut icon" sizes="16x16" href="{{ url_for('static', filename='cn.jpg') }}"/>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+            font-family: Arial, sans-serif;
+            background-image: url('static/27.jpg'); /* Add your background image here */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: bottom; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+        }
+
+        header {
+            background-color: #301934;
+            color: white;
+
+            padding: 20px 20px; /* Increased padding for a better look */
+            text-align: center;
+            font-family: 'Segoe UI Black'; /* Use a specific font */
+            font-size: 65px; /* Increase font size */
+            font-weight: bold; /* Make the text bold */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a shadow for better visibility */
+            height: 130px; /* Set a fixed height for the header */
+            line-height: 100px; /* Center text vertically within the header */
+        }
+
+                @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        header h4 {
+            animation: blink 1.5s infinite;
+        }
+
+
+        nav {
+            background-color: #4B0082;
+            overflow: hidden;
+            height: 60px;
+        }
+
+        nav a {
+             float: left;
+            display: white;
+            color: white;
+            font-family: 'Monotype Corsiva';
+            text-align: center;
+            padding: 18px 24px;
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+        section {
+            background-color: ; /* Semi-transparent white for readability */
+            border: 1px solid #ccc;
+            padding: 30px; /* Increased padding inside the section */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 90%; /* Responsive width */
+            margin: 20px auto; /* Center sections with margin between them */
+            height: auto; /* Auto height to accommodate content */
+            color: white;
+        }
+
+        section h2 {
+            font-size: 24px; /* Section header font size */
+            margin-bottom: 10px;
+        }
+
+        section p {
+            margin-bottom: 20px; /* Increase space between paragraphs */
+            line-height: 1.8; /* Increase line height for better readability */
+            font-size: 18px; /* Slightly increase font size */
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto; /* Push the footer to the bottom */
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h4>CARTOON FACE RETRIEVAL</h4>
+</header>
+
+<nav>
+   
+    <a href="{{url_for('about')}}">About</a>
+     <a href="{{url_for('analyze')}}">Analyze</a>
+</nav>
+
+<section>
+    <h2>Welcome to the Cartoon Face Retrieval </h2>
+    <p> <h3>Retrieving a human cartoon face involves using techniques from computer vision and machine learning to detect, extract, and recognize stylized facial features that resemble a human face but are drawn or animated in a cartoon format.</h3></p>
+
+    <p> Unlike realistic face recognition, cartoon face retrieval must handle exaggerated or simplified features, such as large eyes, unique facial shapes, or limited detail. The process typically begins with detecting the cartoon face within an image, followed by feature extraction—capturing essential attributes like eye placement, nose shape, or color patterns. These features are then compared against a database using similarity measures to retrieve matching or similar cartoon faces. Methods like Convolutional Neural Networks (CNNs), facial landmark detection, and image hashing are commonly used in this domain.</p>
+
+    <p>Cartoon face retrieval is useful in applications such as animation design, content recommendation, face filters, and even in reverse image search for cartoons. The field is challenging due to the artistic variability and abstraction found in cartoon styles.</p>
+</section>
+
+
+<footer>
+    <p>&copy; 2025 Cartoon Face Retrieval. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
